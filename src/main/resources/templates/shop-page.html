@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+
+    <title>Каталог товаров</title>
+
+    <link rel="icon" type="image/png" th:href="@{/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/dist/css/app.min.css}">
+
+    <meta name="ctx" th:content="${#httpServletRequest.getContextPath()}"/>
+</head>
+
+</body>
+<div th:replace="~{navigation :: navi(Shop)}"></div>
+<div class="ui grid four column container-fluid catalog">
+
+    <div class="ui segment">
+        <form class="ui form">
+            <div class="ui accordion">
+                <div class="title">
+                    <span>Фильтр <i class="dropdown icon"></i></span>
+                </div>
+                <div class="content">
+                    <div class="ui container-fluid grid">
+                        <div class="three wide column">
+                            <div class="ui vertical accordion menu">
+                                <div class="item">
+                                    <a class="title normalize">
+                                        <i class="dropdown icon"></i>
+                                        Категория товара
+                                    </a>
+                                    <div class="content">
+                                        <div class="ui form">
+                                            <div class="grouped fields">
+                                                <div class="field">
+                                                    <div class="ui checkbox">
+                                                        <input type="checkbox" name="size" value="small">
+                                                        <label>
+                                                            Телевизор
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <div class="ui checkbox">
+                                                        <input type="checkbox" name="size" value="medium">
+                                                        <label>Холодильник</label>
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <div class="ui checkbox">
+                                                        <input type="checkbox" name="size" value="large">
+                                                        <label>Ноутбук</label>
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <div class="ui checkbox">
+                                                        <input type="checkbox" name="size" value="x-large">
+                                                        <label>Пылесос</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="three wide column">
+                            <div class="ui vertical accordion menu">
+                                <div class="item">
+                                    <a class="title normalize">
+                                        <i class="dropdown icon"></i>
+                                        Цена
+                                    </a>
+                                    <div class="content">
+                                        <div class="fields">
+                                            <div class="field">
+                                                <input type="text" placeholder="От">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="До">
+                                            </div>
+                                        </div>
+                                        <div id="slider" style="margin-top: 30px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="product-view">
+            <span class="toggle-view-big"></span>
+            <span class="toggle-view-small isActive"></span>
+        </div>
+    </div>
+
+
+    <div class="products row">
+        <a class="column product" th:href="@{/shop/product}" th:each="product : ${products}">
+            <div class="wrapper">
+                <div class="content">
+                    <div class="head header">
+                        <p th:text="${product.title}"></p>
+                        <p>QE85Q900RAUXRU <strong class="ui mini star rating" data-rating="4" data-max-rating="5"
+                                                  style="margin-left: 30px;"></strong></p>
+                        <p>Samsung</p>
+                        <span><strong th:text="${#numbers.formatDecimal(product.price, 2,0)}"></strong><i
+                                class="ruble sign icon"></i></span>
+                    </div>
+                    <div class="inner">
+                        <button class="mini ui green basic button">
+                            <i class="shop icon"></i>
+                        </button>
+                        <button class="mini ui red basic button">
+                            <i class="heart icon"></i>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="item image">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<footer th:replace="~{navigation :: footer}"></footer>
+<script type="text/javascript" th:src="@{/dist/js/app.min.js}"></script>
+</body>
+</html>

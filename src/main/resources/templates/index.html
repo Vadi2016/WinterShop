@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="icon" type="image/png" th:href="@{/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/dist/css/app.min.css}">
+</head>
+
+<body>
+
+<header th:replace="~{navigation :: navi(Home)}"></header>
+<div class="ui grid stackable container-fluid" style="padding: 0; margin: -140px 0 0 0; box-sizing: border-box;">
+    <div id="section01" class="row" style="width: 100%; height: 102vh; padding: 0; margin: 0;">
+        <div id="video-viewport">
+            <video autoplay muted loop>
+                <source th:src="@{/dist/img/For_Wes.mp4}" type="video/mp4">
+            </video>
+        </div>
+        <div class="content">
+            <div class="inner-content">
+                <h1>Приветствуем в нашем интернет магазине</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda atque cumque delectus,
+                    doloribus
+                    dolorum eius error explicabo id ipsum laborum minima minus modi molestiae, neque nesciunt nisi
+                    obcaecati
+                    omnis praesentium sint tempora temporibus unde vitae. Dicta fugiat id incidunt ipsa ipsum iusto
+                    minus
+                    odio
+                    quaerat quam, temporibus veritatis voluptate!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae corporis deleniti dolore,
+                    dolorum eius esse eveniet incidunt libero magnam maiores natus odit officia omnis, quibusdam tenetur
+                    ut velit voluptatum.
+                </p>
+                <button class="ui right floated mr-3 primary basic button">Подробнее</button>
+            </div>
+        </div>
+        <a class="scroll_btn" href="#section02"><span></span></a>
+    </div>
+    <div id="section02" class="row centered">
+        <div class="ui column">
+            <div class="ui two column grid adv-product">
+                <div class="ui sixteen wide tablet right floated ten wide computer column">
+                    <div class="slideshow">
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"
+                                     th:style="'background-image:url(' +@{/dist/img/smart_tv.jpg} + ');'"></div>
+                                <div class="swiper-slide"
+                                     th:style="'background-image:url(' +@{/dist/img/smart_tv2.jpg} + ');'"></div>
+                                <div class="swiper-slide"
+                                     th:style="'background-image:url(' +@{/dist/img/smart_tv3.jpg} + ');'"></div>
+                                <div class="swiper-slide" style="background-image:url(https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$);"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"
+                                     th:style="'background-image:url(' +@{/dist/img/smart_tv.jpg} + ');'"></div>
+                                <div class="swiper-slide"
+                                     th:style="'background-image:url(' +@{/dist/img/smart_tv2.jpg} + ');'"></div>
+                                <div class="swiper-slide"
+                                     th:style="'background-image:url(' +@{/dist/img/smart_tv3.jpg} + ');'"></div>
+                                <div class="swiper-slide"
+                                     style="background-image:url(https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui sixteen wide tablet left floated six wide computer column">
+                    <span>НОВИНКА  |  АКЦИЯ</span>
+                    <h1>85” Q900R QLED 8K Smart TV</h1>
+                    <span>QE85Q900RAUXRU</span>
+
+                    <div class='content'>
+                        <a class="normalize" href="">
+                            <div class='ui star rating'>
+                                <i class='active icon'></i>
+                                <i class='active icon'></i>
+                                <i class='active icon'></i>
+                                <i class='active icon'></i>
+                                <i class='active icon'></i>
+                                <span>3.0(2)</span>
+                            </div>
+                        </a>
+                        <a href="" class="normalize ml-5">Написать отзыв</a>
+                    </div>
+                    <div class="diagonal">
+                        <span>ДИАГОНАЛЬ</span>
+                        <div>
+                            <div class="ui toggle basic button">
+                                75"
+                            </div>
+                            <div class="ui toggle basic button active">
+                                85"
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cost">
+                        <span>1 400 000 <i class="ruble sign icon"></i></span>
+                    </div>
+                    <div class="shopping_buttons">
+                        <div class="ui vertical animated teal button add-to-cart" tabindex="0">
+                            <div class="hidden content">Добавить в корзину</div>
+                            <div class="visible content">
+                                <i class="shop icon"></i>
+                            </div>
+                        </div>
+                        <div class="ui animated fade blue button buy_now" tabindex="0">
+                            <div class="visible content"><i class="fas fa-shipping-fast"></i></div>
+                            <div class="hidden content">
+                                <strong>Быстрая покупка</strong>
+                            </div>
+                        </div>
+                        <div class="ui vertical animated red button add-to-like" tabindex="0">
+                            <div class="hidden content">
+                                Добавить в избранное
+                            </div>
+                            <div class="visible content">
+                                <i class="heart icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="swiper-container gallery-top ui middle">-->
+                <!--<div class="swiper-wrapper">-->
+                <!--<div class="swiper-slide"-->
+                <!--th:style="'background-image:url(' +@{/dist/img/smart_tv.jpg} + ');'"></div>-->
+                <!--<div class="swiper-slide"-->
+                <!--th:style="'background-image:url(' + @{/dist/img/smart_tv2.jpg} + ');'"></div>-->
+                <!--<div class="swiper-slide"-->
+                <!--th:style="'background-image:url(' + @{/dist/img/smart_tv3.jpg} + ');'"></div>-->
+                <!--&lt;!&ndash;<div class="swiper-slide"&ndash;&gt;-->
+                <!--&lt;!&ndash;style="background-image:url(https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$);"></div>&ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; Add Arrows &ndash;&gt;-->
+
+                <!--</div>-->
+                <!--<div class="swiper-container gallery-thumbs">-->
+                <!--<div class="swiper-wrapper">-->
+                <!--<div class="swiper-slide"-->
+                <!--th:style="'background-image:url(' + @{/dist/img/smart_tv.jpg} + ');'"></div>-->
+                <!--<div class="swiper-slide"-->
+                <!--th:style="'background-image:url(' + @{/dist/img/smart_tv2.jpg} + ');'"></div>-->
+                <!--<div class="swiper-slide"-->
+                <!--th:style="'background-image:url(' + @{/dist/img/smart_tv3.jpg} + ');'"></div>-->
+                <!--&lt;!&ndash;<div class="swiper-slide"&ndash;&gt;-->
+                <!--&lt;!&ndash;style="background-image:url(https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$);"></div>&ndash;&gt;-->
+
+                <!--</div>-->
+
+                <!--</div>-->
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<footer th:replace="~{navigation :: footer}"></footer>
+<script type="text/javascript" th:src="@{/dist/js/app.min.js}"></script>
+</body>
+</html>

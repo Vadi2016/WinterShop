@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+
+    <title>Каталог товаров</title>
+
+    <link rel="icon" type="image/png" th:href="@{/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/dist/css/app.min.css}">
+
+    <meta name="ctx" th:content="${#httpServletRequest.getContextPath()}"/>
+</head>
+</body>
+<div th:replace="~{navigation :: navi(Shop)}"></div>
+
+<div class="ui grid container-fluid product-desc">
+    <div class="header"><h1 class="ui header">Samsung TV</h1></div>
+    <div class="product-content">
+        <div class="ui grid container carousel">
+            <div id="sync1" class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+            </div>
+
+            <div id="sync2" class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+                <div class="item">
+                    <img src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$"
+                         alt="">
+                </div>
+            </div>
+        </div>
+        <div class="ui grid product-info container">
+            <div class="ui column eight wide price">1 400 000 <i class="ruble sign icon"></i></div>
+            <div class="ui eight wide right aligned column">
+                <div class="ui column six wide button green buy">Купить</div>
+                <div class="ui column six wide button red like">Добавить в избранное</div>
+            </div>
+
+            <div class="ui column styled accordion description normalize">
+                <div class="title">
+                    <i class="dropdown icon"></i>
+                    Описание товара:
+                </div>
+                <div class="content">
+                    <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found
+                        as a welcome guest in many households across the world.</p>
+                </div>
+                <div class="title">
+                    <i class="dropdown icon"></i>
+                    Характеристики:
+                </div>
+                <div class="content">
+                    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a
+                        breed of dog that they find to be compatible with their own lifestyle and desires from a
+                        companion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer th:replace="~{navigation :: footer}"></footer>
+<script type="text/javascript" th:src="@{/dist/js/app.min.js}"></script>
+</body>
+</html>

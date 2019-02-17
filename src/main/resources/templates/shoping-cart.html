@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/dist/css/app.min.css}">
+</head>
+<body>
+<div th:fragment="modal">
+    <div class="ui longer coupled first modal basket">
+        <div class="header">Корзина</div>
+        <div class="scrolling content">
+            <div class="ui divided items">
+                <div class="ui grid centered center aligned middle aligned relaxed item">
+                    <div class="row">
+                        <div class="ui one wide column middle aligned">
+                            <span>1</span>
+                        </div>
+                        <div class="ui two wide column vertical tiny image">
+                            <img class="ui image"
+                                 src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$">
+                        </div>
+                        <div class="ui six wide column middle aligned content">
+                            <a class="header">Samsung 85” Q900R QLED 8K Smart TV</a>
+                        </div>
+                        <div class="ui two wide column mini middle aligned input">
+                            <input type="number" value="1">
+                        </div>
+                        <div class="ui three wide column amount middle aligned text center aligned">
+                            1 400 000 <i class="ruble sign icon"></i>
+                        </div>
+                        <button class="ui one wide column middle aligned button trash" type="submit"><i
+                                class="trash alternate outline icon"></i></button>
+                    </div>
+                </div>
+                <div class="ui grid centered center aligned middle aligned relaxed item">
+                    <div class="row">
+                        <div class="ui one wide column middle aligned">
+                            <span>2</span>
+                        </div>
+                        <div class="ui two wide column vertical tiny image">
+                            <img class="ui image"
+                                 src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$">
+                        </div>
+                        <div class="ui six wide column middle aligned content">
+                            <a class="header">Samsung 85” Q900R QLED 8K Smart TV</a>
+                        </div>
+                        <div class="ui two wide column mini middle aligned input">
+                            <input type="number" value="1">
+                        </div>
+                        <div class="ui three wide column amount middle aligned text center aligned">
+                            1 400 000 <i class="ruble sign icon"></i>
+                        </div>
+                        <button class="ui one wide column middle aligned button trash" type="submit"><i
+                                class="trash alternate outline icon"></i></button>
+                    </div>
+                </div>
+                <div class="ui grid centered center aligned middle aligned relaxed item">
+                    <div class="row">
+                        <div class="ui one wide column middle aligned">
+                            <span>3</span>
+                        </div>
+                        <div class="ui two wide column vertical tiny image">
+                            <img class="ui image"
+                                 src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$">
+                        </div>
+                        <div class="ui six wide column middle aligned content">
+                            <a class="header">Samsung 85” Q900R QLED 8K Smart TV</a>
+                        </div>
+                        <div class="ui two wide column mini middle aligned input">
+                            <input type="number" value="1">
+                        </div>
+                        <div class="ui three wide column amount middle aligned text center aligned">
+                            1 400 000 <i class="ruble sign icon"></i>
+                        </div>
+                        <button class="ui one wide column middle aligned button trash" type="submit"><i
+                                class="trash alternate outline icon"></i></button>
+                    </div>
+                </div>
+                <div class="ui grid centered center aligned middle aligned relaxed item">
+                    <div class="row">
+                        <div class="ui one wide column middle aligned">
+                            <span>4</span>
+                        </div>
+                        <div class="ui two wide column vertical tiny image">
+                            <img class="ui image"
+                                 src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$">
+                        </div>
+                        <div class="ui six wide column middle aligned content">
+                            <a class="header">Samsung 85” Q900R QLED 8K Smart TV</a>
+                        </div>
+                        <div class="ui two wide column mini middle aligned input">
+                            <input type="number" value="1">
+                        </div>
+                        <div class="ui three wide column amount middle aligned text center aligned">
+                            1 400 000 <i class="ruble sign icon"></i>
+                        </div>
+                        <button class="ui one wide column middle aligned button trash" type="submit"><i
+                                class="trash alternate outline icon"></i></button>
+                    </div>
+                </div>
+                <div class="ui grid centered center aligned middle aligned relaxed item">
+                    <div class="row">
+                        <div class="ui one wide column middle aligned">
+                            <span>4</span>
+                        </div>
+                        <div class="ui two wide column vertical tiny image">
+                            <img class="ui image"
+                                 src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$">
+                        </div>
+                        <div class="ui six wide column middle aligned content">
+                            <a class="header">Samsung 85” Q900R QLED 8K Smart TV</a>
+                        </div>
+                        <div class="ui two wide column mini middle aligned input">
+                            <input type="number" value="1">
+                        </div>
+                        <div class="ui three wide column amount middle aligned text center aligned">
+                            1 400 000 <i class="ruble sign icon"></i>
+                        </div>
+                        <button class="ui one wide column middle aligned button trash" type="submit"><i
+                                class="trash alternate outline icon"></i></button>
+                    </div>
+                </div>
+                <div class="ui grid centered center aligned middle aligned relaxed item">
+                    <div class="row">
+                        <div class="ui one wide column middle aligned">
+                            <span>4</span>
+                        </div>
+                        <div class="ui two wide column vertical tiny image">
+                            <img class="ui image"
+                                 src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$">
+                        </div>
+                        <div class="ui six wide column middle aligned content">
+                            <a class="header">Samsung 85” Q900R QLED 8K Smart TV</a>
+                        </div>
+                        <div class="ui two wide column mini middle aligned input">
+                            <input type="number" value="1">
+                        </div>
+                        <div class="ui three wide column amount middle aligned text center aligned">
+                            1 400 000 <i class="ruble sign icon"></i>
+                        </div>
+                        <button class="ui one wide column middle aligned button trash" type="submit"><i
+                                class="trash alternate outline icon"></i></button>
+                    </div>
+                </div>
+                <div class="ui grid centered center aligned middle aligned relaxed item">
+                    <div class="row">
+                        <div class="ui one wide column middle aligned">
+                            <span>4</span>
+                        </div>
+                        <div class="ui two wide column vertical tiny image">
+                            <img class="ui image"
+                                 src="https://images.samsung.com/is/image/samsung/ru-qled-8k-q900r-qe85q900rauxru-frontblack-126963779?$PD_GALLERY_L_JPG$">
+                        </div>
+                        <div class="ui six wide column middle aligned content">
+                            <a class="header">Samsung 85” Q900R QLED 8K Smart TV</a>
+                        </div>
+                        <div class="ui two wide column mini middle aligned input">
+                            <input type="number" value="1">
+                        </div>
+                        <div class="ui three wide column amount middle aligned text center aligned">
+                            1 400 000 <i class="ruble sign icon"></i>
+                        </div>
+                        <button class="ui one wide column middle aligned button trash" type="submit"><i
+                                class="trash alternate outline icon"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="action">
+            <div class="total-price">
+                <span>Итого:</span>
+                <span>5 600 000 <i class="ruble sign icon"></i></span></div>
+            <div class="ui positive left floated button back">
+                <i class="left chevron icon"></i>
+                Продолжить покупки
+            </div>
+            <div class="ui primary right floated approve button">
+                Перейти к оформлению
+                <i class="right chevron icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="ui longer coupled second modal order">
+        <i class="close icon" style="right: 1rem; top: 1rem; color: #000;"></i>
+        <div class="header">
+            Оформление заказа
+        </div>
+        <div class="ui steps">
+            <div class="active step">
+                <i class="user secret icon"></i>
+                <div class="content">
+                    <div class="title">Персональные данные</div>
+                    <div class="description">Введите Ваши персональные данные, если Вы не зарегистрированы</div>
+                </div>
+            </div>
+            <div class="step">
+                <i class="truck icon"></i>
+                <div class="content">
+                    <div class="title">Доставка</div>
+                    <div class="description">Ведите адрес доставки и выбирите способ доставки</div>
+                </div>
+            </div>
+            <div class="step">
+                <i class="payment icon"></i>
+                <div class="content">
+                    <div class="title">Платежная информация</div>
+                    <div class="description">Выберите способ оплаты и введите необходимые данные</div>
+                </div>
+            </div>
+            <div class="disabled step">
+                <i class="info icon"></i>
+                <div class="content">
+                    <div class="title">Подверждение заказа</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scrolling content">
+            <form action="" class="ui form">
+                <div id="section1">
+                    <div class="field">
+                        <label>Фамилия</label>
+                        <input type="text" name="last-name" placeholder="Фамилия">
+                    </div>
+                    <div class="field">
+                        <label>Имя</label>
+                        <input type="text" name="first-name" placeholder="Имя">
+                    </div>
+                    <div class="field">
+                        <label>Отчество</label>
+                        <input type="text" name="patronymic" placeholder="Отчество">
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="field">
+                        <label>Мобильный телефон</label>
+                        <input type="text" name="phone" placeholder="Мобильный телефон">
+                    </div>
+                </div>
+                <div id="section2">
+                    <h4 class="ui dividing header">Адрес</h4>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Область</label>
+                            <input type="text" name="region" placeholder="Область">
+                        </div>
+                        <div class="field">
+                            <label>Город</label>
+                            <input type="text" name="city" placeholder="Город">
+                        </div>
+                    </div>
+                    <div class="four fields">
+                        <div class="two wide field">
+                            <label>Индекс</label>
+                            <input type="text" name="index" placeholder="Индекс">
+                        </div>
+                        <div class="ten wide field">
+                            <label>Улица</label>
+                            <input type="text" name="street" placeholder="Улица">
+                        </div>
+                        <div class="two wide field">
+                            <label>Дом</label>
+                            <input type="text" name="house" placeholder="Дом/корпус">
+                        </div>
+                        <div class="two wide field">
+                            <label>Квартира</label>
+                            <input type="text" name="aprtament" placeholder="Квартира">
+                        </div>
+
+                    </div>
+                    <h4 class="ui dividing header">Способ доставки</h4>
+                    <div class="field">
+                        <select name="skills" class="ui fluid search dropdown">
+                            <option value="">Выберите способ доставки</option>
+                            <option value="0">Почтой России</option>
+                            <option value="1">Курьером</option>
+                            <option value="2">ТК "Деловые линии"</option>
+                        </select>
+                    </div>
+                    <div class="shipping-cost"><span>Стоимость доставки: </span><strong>300 <i
+                            class="ruble sign icon"></i></strong></div>
+                </div>
+                <div id="section3">
+                    <h4 class="ui dividing header">Способ оплаты</h4>
+                    <div class="field">
+                        <select name="paymentMethod" class="ui fluid search dropdown">
+                            <option value="">Выберите способ оплаты</option>
+                            <option value="0">Наличными курьеру</option>
+                            <option value="1">
+                                PayPal
+                            </option>
+                            <option value="2">Visa/Mastercard</option>
+                            <option value="3">Сбербанк @Онлайн</option>
+                            <option value="4">Yandex.Money</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div id="section4">
+                    <h4 class="ui dividing header">Заказ №2321</h4>
+                    <div class="paymentInfoSumm">
+                        <div class="ui summary card" style="z-index: 0">
+                            <div class="content">
+                                <div class="header">Сумма к оплате</div>
+                            </div>
+                            <div class="content">
+                                <table class="ui table">
+                                    <tbody>
+                                    <tr>
+                                        <td class="collapsing left aligned">
+                                            Итого:
+                                        </td>
+
+                                        <td class="right aligned">5 600 000 <i
+                                                class="ruble sign icon"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left aligned">
+                                            Доставка:
+                                        </td>
+
+                                        <td class="right aligned">300 <i class="ruble sign icon"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left aligned">
+                                            К оплате
+                                        </td>
+                                        <td class="right aligned">5 600 300 <i
+                                                class="ruble sign icon"></i></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div>Статус: <span>не оплачен</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="actions">
+            <div class="ui positive left floated button back-one-step">
+                <i class="left chevron icon"></i>
+                Вернуться назад
+            </div>
+            <div class="ui shape confirm">
+                <div class="sides">
+                    <div class="ui primary right floated next-step button side active">
+                        Следующий шаг
+                        <i class="right chevron icon"></i>
+                    </div>
+                    <div class="ui violet right floated bill button side">
+                        <i class="fas fa-money-bill-wave"></i>
+                        Оплатить
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" th:src="@{/dist/js/app.min.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <title>Login Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" th:href="@{/dist/css/app.min.css}">
+</head>
+
+<body>
+<div th:fragment="login_modal" class="login-modal" style="display: none">
+    <div class="close-container">
+        <div class="leftright"></div>
+        <div class="rightleft"></div>
+    </div>
+
+    <div id="signIn">
+        <h1 class="header">Войти</h1>
+        <form class="ui form">
+            <div>
+                <div class="field">
+                    <div class="inputText">Email</div>
+                    <input type="text" name="email">
+                </div>
+                <div class="field">
+                    <div class="inputText">Пароль</div>
+                    <input id="pass_signIn" type="password" name="password">
+                    <label>
+                        <input type="checkbox" id="method">
+                        <i class="far fa-eye"></i>
+                        <i class="far fa-eye-slash"></i>
+                    </label>
+                </div>
+                <div class="field remember">
+                    <input id="rememberMe" type="checkbox" name="gift" tabindex="0">
+                    <label>Запомнить меня</label>
+                </div>
+                <button class="ui huge light button" type="submit">Войти</button>
+                <div class="restore">
+                    <a href="">Восстановить пароль</a>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+    <div id="signUp">
+        <h1 class="header">Регистрация</h1>
+        <form class="ui form">
+            <div class="field">
+                <div class="inputText">Email</div>
+                <input type="text" name="email">
+            </div>
+            <div class="field">
+                <div class="inputText">Пароль</div>
+                <input id="pass_signUp" type="password" name="password">
+                <label>
+                    <input type="checkbox" id="method_signUp">
+                    <i class="far fa-eye"></i>
+                    <i class="far fa-eye-slash"></i>
+                </label>
+            </div>
+            <div class="field">
+                <div class="inputText">Повторите пароль</div>
+                <input id="pass_confirm" type="password" name="password">
+                <label>
+                    <input type="checkbox" id="method_confirm">
+                    <i class="far fa-eye"></i>
+                    <i class="far fa-eye-slash"></i>
+                </label>
+            </div>
+            <button class="ui huge button" type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript" th:src="@{/dist/js/app.min.js}"></script>
+</body>
+</html>

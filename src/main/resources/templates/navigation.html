@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="icon" type="image/png" th:href="@{/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/dist/css/app.min.css}">
+
+</head>
+
+<body>
+
+<header class="ui three column grid fluid-container navbar" th:fragment="navi(activeTab)">
+    <nav class="row">
+        <div class="ui six wide column big horizontal list middle aligned ml-5" style="padding-top: 10px">
+            <div class="item">
+                <a class="" th:href="@{/shop}">Магазин</a>
+            </div>
+            <div class="item">
+                <a class="" href="">О нас</a>
+            </div>
+        </div>
+        <div class="ui three wide column text-center centered">
+            <a th:href="@{/}">
+                <img class="ui middle aligned mx-auto logo" th:src="@{/dist/img/logo2.png}" alt="WinterShop">
+            </a>
+        </div>
+        <div class="ui six wide column big horizontal list middle aligned text-right centered"
+             style="padding-top: 10px">
+            <div class="item">
+                <div class="inp">
+                    <input class="" type="search" placeholder="Поиск...">
+                    <div class="search-btn"><i
+                            class="fas fa-search" style="cursor: pointer;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div id="user"><i class="fas fa-user-alt"></i></div>
+            </div>
+            <div class="item">
+                <div id="basket" data-toggle="modal" data-target="#exampleModalLong"><i
+                        class="fas fa-shopping-basket"></i><span>(0)</span></div>
+            </div>
+            <div class="item">
+                <div><i class="fas fa-heart"></i><span>(0)</span></div>
+            </div>
+        </div>
+    </nav>
+    <div th:replace="~{login :: login_modal}"></div>
+    <div th:replace="~{shoping-cart :: modal}"></div>
+</header>
+<footer class="ui two column grid container-fluid centered text center aligned footer" th:fragment="footer">
+    <div class="column">
+        <div class="ui three column center aligned grid">
+            <div class="item column">
+                <a class="" href="">Правовая информация</a>
+            </div>
+            <div class="item column">
+                <a class="" href="">Политика конфиденциальности</a>
+            </div>
+            <div class="item column">
+                <a class="" href="">Автор</a>
+            </div>
+        </div>
+    </div>
+<div class="column">
+    <div class="ui two column center aligned grid">
+        <div class="item column">
+            <a class="" href="">Подписаться на новости сайта</a>
+        </div>
+        <div class="item column" style="vertical-align: middle">
+            <a class="" href="">Мы в соцсетях</a>
+        </div>
+    </div>
+</div>
+
+</footer>
+
+
+</body>
+</html>
