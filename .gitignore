@@ -56,5 +56,5 @@ webpack.config.js
 *.tar.gz
 *.rar
 
-pom.xml
+
 application.properties
